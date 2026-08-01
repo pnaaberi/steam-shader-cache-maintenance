@@ -70,6 +70,10 @@ See [steam-shader-cache-maintenance.md](steam-shader-cache-maintenance.md) for
 the full installation procedure, agent instructions, hardware and software
 profile, operational commands, tests, and limitations.
 
+## License
+
+This project is available under the [MIT License](LICENSE).
+
 ## Verified environment
 
 - Device: Steam Deck OLED (`Galileo`)

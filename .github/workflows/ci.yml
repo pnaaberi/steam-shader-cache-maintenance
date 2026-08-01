@@ -1,0 +1,24 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Validate script and systemd units
+        run: |
+          bash -n .local/bin/purge-steam-shadercache
+          systemd-analyze verify \
+            .config/systemd/user/purge-steam-shadercache.service \
+            .config/systemd/user/purge-steam-shadercache.timer
+          git diff --check

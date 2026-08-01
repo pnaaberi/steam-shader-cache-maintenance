@@ -166,3 +166,7 @@ The manual service command is the functional test. It should exit with status
 - The timer does not track whether Steam is running. Run it manually if a game
   is actively compiling shaders.
 - Shader caches may grow again between scheduled purges.
+
+## License
+
+This project is available under the [MIT License](LICENSE).
