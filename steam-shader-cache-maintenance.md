@@ -32,8 +32,8 @@ a purge may take longer and may stutter while shaders are compiled again.
 - Steam installed at `/home/deck/.local/share/Steam`
 - `find` and `rm`
 
-The script intentionally uses an absolute path and refuses to operate if the
-target path is not the expected directory.
+The script resolves the target under the installing user's home directory and
+refuses to operate if the target path is not the expected directory.
 
 ## Files
 

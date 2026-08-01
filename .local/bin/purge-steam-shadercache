@@ -1,9 +1,10 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-cache_dir='/home/deck/.local/share/Steam/steamapps/shadercache'
+user_home=${HOME:-}
+cache_dir="$user_home/.local/share/Steam/steamapps/shadercache"
 
-if [[ ! -d "$cache_dir" || "$cache_dir" != '/home/deck/.local/share/Steam/steamapps/shadercache' ]]; then
+if [[ -z "$user_home" || "$user_home" != /* || ! -d "$cache_dir" || "$cache_dir" != "$user_home/.local/share/Steam/steamapps/shadercache" ]]; then
     printf 'Refusing to purge unexpected path: %s\n' "$cache_dir" >&2
     exit 1
 fi

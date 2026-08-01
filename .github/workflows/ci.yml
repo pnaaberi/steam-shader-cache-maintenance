@@ -17,6 +17,8 @@ jobs:
 
       - name: Validate script and systemd units
         run: |
+          install -Dm700 .local/bin/purge-steam-shadercache \
+            "$HOME/.local/bin/purge-steam-shadercache"
           bash -n .local/bin/purge-steam-shadercache
           systemd-analyze verify \
             .config/systemd/user/purge-steam-shadercache.service \

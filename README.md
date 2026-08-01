@@ -55,6 +55,7 @@ ExecMainStatus=0
 The service runs with systemd hardening enabled: no privilege escalation,
 private temporary storage, a read-only system view, and write access only to
 the shader-cache directory. It also uses a private default file-creation mask.
+The paths are resolved relative to the installing user's home directory.
 
 ## Safety boundary
 
