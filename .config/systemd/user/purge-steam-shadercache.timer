@@ -1,0 +1,11 @@
+[Unit]
+Description=Purge Steam shader cache every 30 days
+
+[Timer]
+OnBootSec=30d
+OnUnitActiveSec=30d
+Persistent=true
+Unit=purge-steam-shadercache.service
+
+[Install]
+WantedBy=timers.target

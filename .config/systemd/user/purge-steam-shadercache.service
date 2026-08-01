@@ -1,0 +1,11 @@
+[Unit]
+Description=Purge Steam shader cache
+
+[Service]
+Type=oneshot
+ExecStart=/home/deck/.local/bin/purge-steam-shadercache
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ReadWritePaths=/home/deck/.local/share/Steam/steamapps/shadercache
+UMask=0077
